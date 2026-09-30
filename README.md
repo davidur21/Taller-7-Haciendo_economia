@@ -39,7 +39,6 @@ El fondo quiere comparar la evolución de **tres sectores entre 2015 y 2025**, c
 | 3. Analista cuantitativo | Santiago Martinez Reinoso | Pesos, índices, retornos, desviaciones estándar, n e intervalos de confianza |
 | 4. Especialista en visualización y comunicación | Emanuel Fernando Hernández León | Gráficos, tablas y narrativa visual de la presentación |
 
-> **Responsabilidad compartida.** Los roles definen una responsabilidad principal, no dividen el taller. El portavoz se elige al azar justo antes de exponer, así que los cuatro integrantes pueden explicar y defender cualquier parte del análisis.
 
 ---
 
