@@ -3,211 +3,151 @@
 **Curso:** Haciendo Economía · Universidad del Rosario · Prof. Paul Rodríguez Lesmes
 **Cliente (simulado):** Fondo de inversión
 **Base metodológica:** CORE Econ, *Doing Economics*, sección 10.2 — [books.core-econ.org/doing-economics/book/text/10-02.html](https://books.core-econ.org/doing-economics/book/text/10-02.html)
-**Herramienta obligatoria:** Microsoft Excel (fórmulas visibles) · Fuente de datos: Bloomberg (conexión Excel–Bloomberg) · Visualización complementaria opcional: Power BI
+**Herramientas:** Microsoft Excel (fórmulas visibles) · Datos: Bloomberg Terminal vía BQL
 
 ---
 
 ## 1. El encargo
 
-El fondo quiere comparar la evolución de **tres sectores de la economía global entre 2015 y 2025**, con énfasis en las diferencias entre un periodo previo al COVID (2015) y uno posterior (2025). Para ello, el equipo consultor construye índices sectoriales transparentes a partir de precios y volúmenes de mercado, evalúa cómo la regla de ponderación cambia la lectura de los resultados, compara retornos y volatilidad, y entrega una **recomendación de inversión** sustentada en la evidencia.
-
-El fondo necesita respuesta a cuatro preguntas:
+El fondo quiere comparar la evolución de **tres sectores entre 2015 y 2025**, con énfasis en las diferencias entre un año previo al COVID (2015) y uno posterior (2025). El equipo construyó índices sectoriales transparentes a partir de precios y volúmenes de mercado, evaluó cómo la regla de ponderación cambia la lectura de los resultados, comparó retornos y volatilidad, y formuló una **recomendación de inversión** sustentada en la evidencia.
 
 | # | Pregunta del fondo | Dónde se responde |
 |---|---|---|
-| i | ¿Cómo se construyeron los tres índices y qué representan? | Secciones 1 y 2.1 del taller |
-| ii | ¿Qué muestran sobre desempeño y riesgo? | Secciones 2.2–2.5 |
-| iii | ¿Qué cambió entre 2015 y 2025 y qué limita esa comparación? | Secciones 3.1–3.4 |
-| iv | ¿Qué sectores priorizar, mantener en observación o evitar? | Sección 3.5 |
+| i | ¿Cómo se construyeron los tres índices y qué representan? | Puntos 1.1–1.3 y 2.1 |
+| ii | ¿Qué muestran sobre desempeño y riesgo? | Puntos 2.2–2.5 |
+| iii | ¿Qué cambió entre 2015 y 2025 y qué limita esa comparación? | Puntos 3.1–3.4 |
+| iv | ¿Qué sectores priorizar, mantener en observación o evitar? | Punto 3.5 |
 
 ---
 
-## 2. Equipo consultor
+## 2. Entregables
 
-**Integrantes:** Derek Santiago Gaona · Emanuel Fernando Hernández León · Santiago Martinez Reinoso · David Pascagaza Rodriguez
+| Entregable | Archivo / enlace | Peso en la nota |
+|---|---|---|
+| Libro de Excel con todos los cálculos formulados | `TALLER7-DOINGECON.xlsx` | 35 pts (grupal) |
+| Presentación al cliente (máx. 5 min) | Canva: `[pegar enlace]` · respaldo en PDF: `Taller7_Informe_Fondo.pdf` | 50 pts (grupal) |
+| Aportes individuales por rol | Hoja `PORTADA`, sección 2, del libro de Excel | 15 pts (individual) |
+
+---
+
+## 3. Equipo consultor
 
 | Rol | Integrante | Responsabilidad principal |
 |---|---|---|
-| 1. Líder del proyecto y enlace con el fondo | `[Por asignar]` | Coordinación, alineación con las preguntas del fondo e integración de la recomendación de inversión |
-| 2. Especialista en datos y reproducibilidad | `[Por asignar]` | Descarga Excel–Bloomberg, documentación de fuentes, estructura del libro y trazabilidad de fórmulas |
-| 3. Analista cuantitativo | `[Por asignar]` | Pesos, índices, retornos, desviaciones estándar, n e intervalos de confianza |
-| 4. Especialista en visualización y comunicación | `[Por asignar]` | Gráficos, tablas, narrativa visual y (opcional) tablero en Power BI |
+| 1. Líder del proyecto y enlace con el fondo | David Pascagaza Rodriguez | Coordinación, alineación con las preguntas del fondo e integración de la recomendación de inversión |
+| 2. Especialista en datos y reproducibilidad | Derek Santiago Gaona | Descarga Excel–Bloomberg, documentación de fuentes, estructura del libro y trazabilidad de fórmulas |
+| 3. Analista cuantitativo | Santiago Martinez Reinoso | Pesos, índices, retornos, desviaciones estándar, n e intervalos de confianza |
+| 4. Especialista en visualización y comunicación | Emanuel Fernando Hernández León | Gráficos, tablas y narrativa visual de la presentación |
 
-> **Responsabilidad compartida.** Los roles definen una responsabilidad principal, no dividen el taller. El portavoz de la presentación se elige al azar justo antes de exponer, por lo que los cuatro integrantes deben poder explicar y defender cualquier parte del análisis.
-
-Los aportes individuales (2 a 4 por integrante, con la hoja, rango, tabla o gráfico donde se verifican) se registran en la hoja `00_Equipo` del libro y se resumen en la sección 9 de este README.
+> **Responsabilidad compartida.** Los roles definen una responsabilidad principal, no dividen el taller. El portavoz se elige al azar justo antes de exponer, así que los cuatro integrantes pueden explicar y defender cualquier parte del análisis.
 
 ---
 
-## 3. Evaluación
-
-| Componente | Puntos | Tipo de nota |
-|---|---|---|
-| Presentación al cliente (máx. 5 min) | 50 | Grupal |
-| Archivo de Excel | 35 | Grupal |
-| Aportes asociados al rol | 15 | Individual |
-| **Total** | **100** | |
-
----
-
-## 4. Estructura del repositorio
+## 4. Estructura de la entrega
 
 ```
 Taller7_Indices_Sectoriales/
-│
-├── README.md                      ← este archivo
-│
-├── Excel/
-│   ├── README.md                  ← mapa de hojas y convenciones de fórmulas
-│   └── Taller7_Indices_Sectoriales.xlsx
-│
-├── RawData/
-│   ├── README.md                  ← tickers, campos Bloomberg, fechas y fecha de descarga
-│   └── (exportaciones Bloomberg de respaldo en .csv / .xlsx)
-│
-├── PowerBI/                       ← opcional
-│   ├── README.md
-│   └── Taller7_Dashboard.pbix
-│
-├── Presentacion/
-│   ├── README.md
-│   └── Taller7_Informe_Fondo.pptx
-│
-└── Docs/
-    └── Taller_7_Consultoria_Fondo_Inversion.docx   ← enunciado original
+├── README.md                                  ← este archivo
+├── TALLER7-DOINGECON.xlsx                     ← libro con datos, cálculos, gráficos y conclusiones
+├── Taller7_Informe_Fondo.pdf                  ← respaldo de la presentación (el original está en Canva)
+└── Taller_7_Consultoria_Fondo_Inversion.docx  ← enunciado original
 ```
 
-> **¿Por qué `RawData/` si los datos viven en Excel?** Las fórmulas BDH solo se recalculan en un terminal con Bloomberg. Guardar una copia estática de la descarga permite abrir y verificar el libro en cualquier computador sin perder los datos.
+> **El libro abre sin terminal Bloomberg.** Las hojas `RETAIL`, `HIDROCARBUROS` y `TECNOLOGY` guardan las consultas BQL originales. Las hojas con sufijo `1` son copias estáticas de esos datos, y todas las fórmulas del libro están conectadas a esas copias.
 
 ---
 
 ## 5. Mapa del libro de Excel
 
-El libro sigue el orden del enunciado: cada hoja alimenta a la siguiente por referencia, sin valores pegados.
-
-| Hoja | Contenido | Punto del taller |
+| Hoja | Contenido | Puntos del taller |
 |---|---|---|
-| `00_Equipo` | Integrantes, roles y registro de aportes verificables | Organización |
-| `01_Universo` | 3 sectores × 10 acciones: ticker Bloomberg, empresa, industria, país, fuente | 1.1 · 2.1 |
-| `02_Precios` | Precio de cierre diario (`PX_LAST`), 2015–2025 | 1.1 |
-| `03_Volumen` | Volumen diario (`PX_VOLUME`), 2015–2025 | 1.1 |
-| `04_Pesos` | Pesos por volumen y por precio inicial (enero 2015), control de suma = 1 y comparación | 1.2 · 1.3 |
-| `05_Retornos` | Retornos aritméticos diarios por acción | 2.2 |
-| `06_Indices` | Retornos ponderados diarios de cada índice y niveles base 100 | 2.2 · 2.5 |
-| `07_Distribuciones` | Cajas y bigotes e histogramas de los retornos ponderados | 2.3 · 2.4 |
-| `08_Comparacion_2015_2025` | Promedio, desviación estándar, n e IC 95 % por índice y año; gráficos de barras con IC | 3.1 · 3.2 · 3.3 |
-| `09_Interpretacion` | Lectura de resultados, cautelas metodológicas y recomendación de inversión | 2.1 · 2.5 · 3.4 · 3.5 |
+| `PORTADA` | Equipo y roles, aportes individuales verificables, documentación de datos, mapa del libro y lista de cumplimiento | Organización · 1.1 |
+| `RETAIL` · `HIDROCARBUROS` · `TECNOLOGY` | Consultas BQL originales (`px_last`, `px_volume`). Requieren terminal y ya no alimentan cálculos | 1.1 |
+| `RETAIL1` · `HIDROCARBUROS1` · `TECNOLOGY1` | Copia estática de fechas, precios y volúmenes. Base de todas las fórmulas | 1.1 |
+| `INDICES RETAIL` · `INDICES HIDROCARBUROS` · `INDICES TECNOLOGY` | Pesos, retornos diarios, retornos ponderados, índices base 100, estadísticas, IC 95 %, tablas de histograma y gráficos | 1.2 · 1.3 · 2.2–2.5 · 3.1–3.3 |
+| `COMPARATIVO` | Métricas clave de los tres índices y gráfico de líneas base 100 conjunto | 2.5 · 3.4 · 3.5 |
+| `CONCLUSIONES` | Tabla de evidencia ligada por fórmula, respuestas escritas, recomendación de inversión y cautelas | 1.3 · 2.1 · 2.3–2.5 · 3.4 · 3.5 |
 
 ---
 
-## 6. Metodología
+## 6. Datos y metodología
 
-### 6.1 Datos (1.1)
-- **Periodo:** 1 de enero de 2015 – 31 de diciembre de 2025, frecuencia diaria.
-- **Universo:** 3 sectores × 10 acciones = 30 series de precio y 30 de volumen.
-- **Descarga con Bloomberg Excel Add-in**, por ejemplo:
+### 6.1 Universo y datos (1.1)
 
-  ```
-  =BDH("XOM US Equity"; "PX_LAST";   "01/01/2015"; "31/12/2025")
-  =BDH("XOM US Equity"; "PX_VOLUME"; "01/01/2015"; "31/12/2025")
-  ```
-  *(el separador `;` o `,` depende de la configuración regional del Excel)*
+| Índice | Acciones (tickers Bloomberg `US Equity`) |
+|---|---|
+| Retail | AMZN, WMT, COST, TGT, HD, LOW, BBY, ULTA, DG, DLTR |
+| Hidrocarburos | XOM, CVX, BP, SHEL, E, HAL, PBR, EC, OXY, COP |
+| Tecnología | AAPL, MSFT, NVDA, GOOGL, META, ORCL, AMD, INTC, QCOM, CSCO |
 
-- **Sectores seleccionados:** `[Sector A]`, `[Sector B]`, `[Sector C]` — el detalle de tickers se documenta en `01_Universo` y en `RawData/README.md`.
+- **Fuente:** Bloomberg (BQL), campos `px_last` (precio de cierre) y `px_volume` (volumen), diarios.
+- **Periodo:** 2-ene-2015 a 31-dic-2025. Son 2.766 días por acción y 2.765 retornos diarios por índice, con las fechas alineadas en las 10 acciones de cada sector.
 
 ### 6.2 Pesos (1.2 · 1.3)
-Para cada acción *i* dentro del índice *k*, con valores de **enero de 2015** (*t = 0*):
+Los pesos son fijos y se calculan con los datos del **primer día hábil, 2-ene-2015**:
 
 | Regla | Fórmula | Lectura |
 |---|---|---|
-| Por volumen | w<sub>i</sub> = V<sub>i,0</sub> / Σ<sub>j</sub> V<sub>j,0</sub> | Pesa más la acción más transada (liquidez) |
-| Por precio | w<sub>i</sub> = P<sub>i,0</sub> / Σ<sub>j</sub> P<sub>j,0</sub> | Pesa más la acción de mayor precio nominal (lógica tipo Dow Jones) |
+| Por volumen | peso = volumen inicial de la acción ÷ volumen inicial total del índice | Pesa más la acción más transada (liquidez) |
+| Por precio | peso = precio inicial de la acción ÷ suma de precios iniciales | Pesa más la acción de mayor precio nominal |
 
-Control obligatorio en `04_Pesos`: `=SUMA(rango_pesos)` = 1 para cada índice y cada regla.
-
-> **Decisión del equipo a documentar:** qué se entiende por "enero de 2015" — primer día hábil del mes o promedio de enero. El promedio suaviza días atípicos; el primer día es más simple de trazar.
+Cada juego de pesos tiene una celda de control que verifica que sume 1 (`INDICES *!D17:E17`).
 
 ### 6.3 Retornos e índices (2.2 · 2.5)
-- **Retorno aritmético diario por acción:** r<sub>i,t</sub> = (P<sub>i,t</sub> − P<sub>i,t−1</sub>) / P<sub>i,t−1</sub>
-- **Retorno ponderado del índice:** r<sub>k,t</sub> = Σ<sub>i</sub> w<sub>i</sub> · r<sub>i,t</sub> → en Excel, `=SUMAPRODUCTO(pesos; retornos_fila)`
-- **Nivel del índice, base 100 en enero de 2015:** I<sub>k,0</sub> = 100; I<sub>k,t</sub> = I<sub>k,t−1</sub> · (1 + r<sub>k,t</sub>)
+- **Retorno diario por acción:** P(t) ÷ P(t−1) − 1
+- **Retorno ponderado del índice:** Σ peso × retorno
+- **Índice base 100:** I(0) = 100; I(t) = I(t−1) × (1 + retorno ponderado)
 
 ### 6.4 Comparación 2015 vs. 2025 (3.1 · 3.2)
-Para cada índice y cada año, sobre los retornos ponderados diarios:
-
-| Estadístico | Excel (español) | Excel (inglés) |
-|---|---|---|
-| Promedio | `PROMEDIO` | `AVERAGE` |
-| Desviación estándar muestral | `DESVEST.M` | `STDEV.S` |
-| Número de observaciones | `CONTAR` | `COUNT` |
-| Margen del IC 95 % | `INTERVALO.CONFIANZA.T(0,05; s; n)` | `CONFIDENCE.T(0.05, s, n)` |
-| Límite inferior / superior | promedio − margen / promedio + margen | |
+Para cada índice y cada año, sobre los retornos ponderados: `COUNTIFS` (n), `AVERAGEIFS` (promedio), `STDEV.S` (desviación estándar) y `CONFIDENCE.T(0,05; s; n)` (margen del IC 95 %). Límites del intervalo = promedio ± margen.
 
 ---
 
-## 7. Reglas de reproducibilidad
+## 7. Resultados principales (ponderación por volumen)
 
-1. **Cero valores hardcodeados** cuando el resultado pueda obtenerse con fórmula o referencia.
-2. **Fórmulas visibles:** nada de "pegar como valores" en hojas de cálculo; la única excepción es la copia de respaldo en `RawData/`.
-3. **Rangos con nombre** (p. ej. `Pesos_Vol_A`, `Ret_Indice_A_2015`) para que las fórmulas se lean solas.
-4. **Celdas de control** visibles: suma de pesos = 1, conteo de observaciones por año, fechas faltantes.
-5. **Actualización:** cambiar las fechas o los tickers en `01_Universo` debe propagarse a todo el libro sin rehacer cálculos a mano.
-6. **Fechas alineadas:** las 10 acciones de un índice comparten el mismo calendario; los días sin cotización se tratan de forma explícita y documentada.
+| Métrica | Tecnología | Retail | Hidrocarburos |
+|---|---|---|---|
+| Índice final (base 100) | 2.623 | 968 | 179 |
+| Rendimiento acumulado (volumen / precio) | 2.523 % / 554 % | 868 % / 331 % | 79 % / 25 % |
+| Desviación estándar diaria | 1,75 % | 1,52 % | 2,33 % |
+| Curtosis (exceso) | 7,2 | 5,7 | 14,6 |
+| Retorno / riesgo | 0,076 | 0,062 | 0,021 |
+| ¿Se traslapan los IC de 2015 y 2025? | Sí | Sí | Sí |
+| **Recomendación** | **Priorizar** | **Mantener bajo observación** | **Evitar por ahora** |
+
+- **La regla de ponderación importa.** Por volumen, las dos acciones más transadas suman 76 % de Retail, 69 % de Tecnología y 59 % de Hidrocarburos.
+- **2015 vs. 2025.** No hay evidencia de un cambio en el retorno promedio diario en ningún sector. Lo que sí cambió es la dispersión: −39 % en Hidrocarburos y +35 % en Tecnología.
+- **Ciclos.** Las variaciones anuales de Retail y Tecnología se mueven juntas (correlación 0,65), mientras Hidrocarburos va a contraciclo (−0,59 con Retail).
+
+El detalle y la redacción completa están en la hoja `CONCLUSIONES`.
 
 ---
 
 ## 8. Cautelas metodológicas
 
-- **Tamaño del universo:** 10 acciones no representan un sector completo; los resultados describen *este* índice, no el sector global.
-- **Sesgo de supervivencia:** elegir hoy empresas que existían en 2015 excluye a las que quebraron o salieron de bolsa en el periodo.
-- **Pesos fijos:** ponderar con datos de enero de 2015 ignora cómo cambió la importancia relativa de cada empresa en diez años.
-- **Ponderación por precio:** el precio nominal no mide el tamaño de la empresa; un *split* altera el peso implícito.
-- **Retornos aritméticos:** no incluyen dividendos (salvo que se use un campo de retorno total).
-- **Comparación 2015 vs. 2025:** son dos años puntuales; una diferencia entre ellos **no identifica el efecto causal del COVID**. Tasas de interés, inflación, precios de materias primas y choques sectoriales ocurren en el mismo intervalo.
+1. **Muestra:** 10 acciones por sector que siguen listadas hoy (sesgo de supervivencia) y con el peso concentrado en pocas acciones.
+2. **Construcción:** los pesos fijos de enero de 2015 equivalen a rebalancear a diario, sin costos de transacción ni impuestos. Los retornos son de precio, sin dividendos.
+3. **Inferencia:** `CONFIDENCE.T` supone normalidad aproximada, pero los retornos tienen colas pesadas. Los intervalos son una guía, no una prueba definitiva.
+4. **Causalidad:** comparar 2015 y 2025 es descriptivo y no permite atribuir las diferencias al COVID.
+5. **Desempeño pasado:** no garantiza rendimientos futuros. Este es un análisis académico, no asesoría financiera.
 
 ---
 
-## 9. Estado del proyecto y aportes
+## 9. Cumplimiento y aportes individuales
 
-| Punto | Descripción | Estado |
-|---|---|---|
-| 1.1 | Selección de sectores, universo y descarga de datos | ⬜ Pendiente |
-| 1.2 | Pesos por volumen | ⬜ Pendiente |
-| 1.3 | Pesos por precio y comparación | ⬜ Pendiente |
-| 2.1 | Descripción de los índices y limitaciones | ⬜ Pendiente |
-| 2.2 | Retornos diarios y ponderados | ⬜ Pendiente |
-| 2.3 | Cajas y bigotes | ⬜ Pendiente |
-| 2.4 | Histogramas | ⬜ Pendiente |
-| 2.5 | Índices base 100 | ⬜ Pendiente |
-| 3.1 | Desviación estándar y n (2015 vs. 2025) | ⬜ Pendiente |
-| 3.2 | IC 95 % con `CONFIDENCE.T` | ⬜ Pendiente |
-| 3.3 | Barras con IC | ⬜ Pendiente |
-| 3.4 | Interpretación | ⬜ Pendiente |
-| 3.5 | Recomendación de inversión | ⬜ Pendiente |
+Todos los puntos del taller (1.1 a 3.5) están cumplidos. La hoja `PORTADA` (sección 5) indica dónde se verifica cada uno.
 
-**Aportes individuales verificables** (se completan cuando cada integrante los confirme):
-
-| Integrante | Rol | Aporte | Dónde verificarlo |
+| Integrante | Rol | Aportes concretos | Dónde verificarlo |
 |---|---|---|---|
-| Derek Santiago Gaona | | | |
-| Emanuel Fernando Hernández León | | | |
-| Santiago Martinez Reinoso | | | |
-| David Pascagaza Rodriguez | | | |
-
----
-
-## 10. Cronograma
-
-| Sesión | Actividad |
-|---|---|
-| 1 | Entrenamiento en Bloomberg (club de inversiones) y socialización del encargo |
-| 2 | Conformación del equipo, selección de sectores y acciones, conexión Excel–Bloomberg y construcción del libro |
-| 3 | Presentación al fondo: informe ejecutivo de máximo 5 minutos, orden y portavoz aleatorios |
+| David Pascagaza Rodriguez | Líder del proyecto | Resumen comparativo de métricas; verificación de cobertura de los puntos 1.1–3.5; interpretación 2015 vs. 2025 y recomendación con cautelas | `COMPARATIVO!A5:D20`; `PORTADA!A43:D56`; `CONCLUSIONES` secciones I, J y K |
+| Derek Santiago Gaona | Datos y reproducibilidad | Descarga BQL de 30 acciones; copias estáticas y reconexión de fórmulas; documentación de fuentes y estructura del libro | Hojas `RETAIL`, `HIDROCARBUROS`, `TECNOLOGY` y sufijo `1`; `PORTADA` secciones 3 y 4 |
+| Santiago Martinez Reinoso | Analista cuantitativo | Pesos por volumen y precio; retornos e índices base 100; n, promedio, desviación e IC 95 %; estadísticas descriptivas | `INDICES *!A5:F17`, `A34:P2800`, `I5:M13`, `I15:K30`; `CONCLUSIONES` sección A |
+| Emanuel Fernando Hernández León | Visualización y comunicación | Gráficos de línea base 100; histogramas y cajas y bigotes; barras 2015 vs. 2025 con IC | Gráficos `Linea_*`, `Histograma_*`, `Caja_*` e `IC_*` en `INDICES *` y `COMPARATIVO` |
 
 ---
 
 ## Referencias
 
 - CORE Econ. *Doing Economics*, Empirical Project 10, sección 10.2. [books.core-econ.org/doing-economics/book/text/10-02.html](https://books.core-econ.org/doing-economics/book/text/10-02.html)
-- Bloomberg L.P. *Bloomberg Excel Add-in — BDH (Bloomberg Data History)*.
-- Microsoft. *Función INTERVALO.CONFIANZA.T / CONFIDENCE.T*.
+- Bloomberg L.P. *Bloomberg Query Language (BQL)*: campos `px_last` y `px_volume`.
+- Microsoft. *Función CONFIDENCE.T (INTERVALO.CONFIANZA.T)*.
