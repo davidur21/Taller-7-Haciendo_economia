@@ -1,9 +1,9 @@
 # Taller 7 — Índices sectoriales antes y después del COVID (2015–2025)
 
-**Curso:** Haciendo Economía · Universidad del Rosario · Prof. Paul Rodríguez Lesmes
-**Cliente (simulado):** Fondo de inversión
-**Base metodológica:** CORE Econ, *Doing Economics*, sección 10.2 — [books.core-econ.org/doing-economics/book/text/10-02.html](https://books.core-econ.org/doing-economics/book/text/10-02.html)
-**Herramientas:** Microsoft Excel (fórmulas visibles) · Datos: Bloomberg Terminal vía BQL
+- **Curso:** Haciendo Economía · Universidad del Rosario · Prof. Paul Rodríguez Lesmes
+- **Cliente (simulado):** Fondo de inversión
+- **Base metodológica:** CORE Econ, *Doing Economics*, sección 10.2 — [books.core-econ.org/doing-economics/book/text/10-02.html](https://books.core-econ.org/doing-economics/book/text/10-02.html)
+- **Herramientas:** Microsoft Excel (fórmulas visibles) · Datos: Bloomberg Terminal vía BQL
 
 ---
 
@@ -25,7 +25,7 @@ El fondo quiere comparar la evolución de **tres sectores entre 2015 y 2025**, c
 | Entregable | Archivo / enlace | Peso en la nota |
 |---|---|---|
 | Libro de Excel con todos los cálculos formulados | `TALLER7-DOINGECON.xlsx` | 35 pts (grupal) |
-| Presentación al cliente (máx. 5 min) | Canva: `[pegar enlace]` · respaldo en PDF: `Taller7_Informe_Fondo.pdf` | 50 pts (grupal) |
+| Presentación al cliente (máx. 5 min) | `Taller7_Indices_Sectoriales.pptx` (guion del expositor en las notas de cada diapositiva) | 50 pts (grupal) |
 | Aportes individuales por rol | Hoja `PORTADA`, sección 2, del libro de Excel | 15 pts (individual) |
 
 ---
@@ -39,16 +39,17 @@ El fondo quiere comparar la evolución de **tres sectores entre 2015 y 2025**, c
 | 3. Analista cuantitativo | Santiago Martinez Reinoso | Pesos, índices, retornos, desviaciones estándar, n e intervalos de confianza |
 | 4. Especialista en visualización y comunicación | Emanuel Fernando Hernández León | Gráficos, tablas y narrativa visual de la presentación |
 
+> **Responsabilidad compartida.** Los roles definen una responsabilidad principal, no dividen el taller. El portavoz se elige al azar justo antes de exponer, así que los cuatro integrantes pueden explicar y defender cualquier parte del análisis.
 
 ---
 
 ## 4. Estructura de la entrega
 
 ```
-Taller7_Indices_Sectoriales/
+Taller-7-Haciendo_economia/
 ├── README.md                                  ← este archivo
 ├── TALLER7-DOINGECON.xlsx                     ← libro con datos, cálculos, gráficos y conclusiones
-├── Taller7_Informe_Fondo.pdf                  ← respaldo de la presentación (el original está en Canva)
+├── Taller7_Indices_Sectoriales.pptx           ← presentación al fondo de inversión
 └── Taller_7_Consultoria_Fondo_Inversion.docx  ← enunciado original
 ```
 
